@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body{
+      background-color: #dddddd;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+
+  h1{
+      color: #30475e;
+      text-align: center;
+      margin: 30px;
+      font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .search{
+    flex-direction: row;
+    text-align: center;
+    width: 40vw;
+    height: 50vh;
+  }
+
+  .search textarea{
+      border-radius: 5px;
+  }
+
+  .search button{
+      background-color: #f05454;
+      border: none;
+      padding: 5px;;
+      padding-left: 30px;
+      padding-right: 30px;
+      border-radius: 5px;
+  }
+
+
