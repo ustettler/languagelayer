@@ -4,8 +4,8 @@
 
 ### Authors:
 
-⋅⋅* Zipora
-⋅⋅* Urs
-⋅⋅* Anton
+* Zipora
+* Urs
+* Anton
 
 
