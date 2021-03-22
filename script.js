@@ -1,17 +1,16 @@
-console.log("Test")
+fetch("https://type.fit/api/quotes")
+    .then(function (response) {
+        return response.json();
+    })
 
-// set endpoint and your access key
-var access_key = '2e078988a7a23a4ead312ccefe24fb3a';
-var query = 'Hello my friend, how are you?';
+    .then(function (data) {
+        document.querySelector('button').addEventListener('click', e => {
+            // Generate random number between 0 & length of data (160x)
+            const randomNumber = Math.floor(Math.random() * data.length);
 
-// AJAX call
-$.ajax({
-    url: 'http://api.languagelayer.com/detect?access_key=2e078988a7a23a4ead312ccefe24fb3a' + access_key + '&query=' + encodeURIComponent(query),
-    dataType: 'jsonp',
-    success: function(json) {
+            // document.querySelector('.quote').innerHTML = data[randomNumber].text + data[randomNumber].author;
+            document.querySelector('.quote').innerHTML = `<p>${data[randomNumber].text} </p> <p>${data[randomNumber].author}</p>  `
 
-    // Access and use your preferred validation result objects
-    console.log(json.success);
-                
-    }
-});
+        })
+
+    });
